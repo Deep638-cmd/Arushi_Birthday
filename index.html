@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Guli 🎂</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ══════════════ LOGIN PAGE ══════════════ -->
+<div id="pageLogin" class="page active">
+  <div class="hearts-bg" id="heartsBgLogin"></div>
+  <div class="login-wrapper">
+    <div class="login-top-emoji">🎀💖🎀</div>
+    <div class="login-box">
+      <div class="login-lock">🔐</div>
+      <h2 class="login-title">Welcome!</h2>
+      <p class="login-sub">Enter your credentials to continue 🌸</p>
+      <div class="input-group">
+        <label>👤 Username</label>
+        <input type="text" id="loginUser" placeholder="Enter username" autocomplete="off"/>
+      </div>
+      <div class="input-group">
+        <label>🔑 Password</label>
+        <div class="pw-wrap">
+          <input type="password" id="loginPass" placeholder="Enter password" autocomplete="off"
+                 onkeydown="if(event.key==='Enter') doLogin()"/>
+          <span class="eye-toggle" onclick="toggleEye('loginPass',this)">👁️</span>
+        </div>
+      </div>
+      <div id="loginError" class="error-msg"></div>
+      <button class="login-btn" onclick="doLogin()">💝 Enter the Surprise 💝</button>
+    </div>
+    <p class="login-hint">🎂 A special birthday surprise awaits…</p>
+  </div>
+</div>
+
+
+<!-- ══════════════ PAGE 1 ══════════════ -->
+<div id="page1" class="page">
+  <div class="hearts-bg" id="heartsBg"></div>
+  <div class="top-banner">
+    <span class="banner-emoji">🎀</span>
+    <span class="banner-text">A Special Gift For You</span>
+    <span class="banner-emoji">🎀</span>
+  </div>
+
+  <!-- Left: Teddy bears -->
+  <div class="side-col left-col">
+    <div class="deco-card float-1">
+      <img src="imgs/teddy1.png" alt="Teddy" onerror="this.src='https://em-content.zobj.net/source/apple/354/teddy-bear_1f9f8.png'"/>
+      <p>🧸</p>
+    </div>
+    <div class="deco-card float-2">
+      <img src="imgs/teddy2.png" alt="Teddy 2" onerror="this.src='https://em-content.zobj.net/source/apple/354/teddy-bear_1f9f8.png'"/>
+      <p>🧸</p>
+    </div>
+  </div>
+
+  <!-- Center -->
+  <div class="center-col">
+    <div class="sparkle-title">✨ Happy Birthday ✨</div>
+
+    <!-- ★ Animated GULI name ★ -->
+    <div class="guli-name-p1">
+      <span style="--li:0">G</span>
+      <span style="--li:1">u</span>
+      <span style="--li:2">l</span>
+      <span style="--li:3">i</span>
+      <span class="gn-flower" style="--li:4">🌸</span>
+    </div>
+
+    <div class="photo-frame">
+      <div class="ribbon ribbon-top-left"></div>
+      <div class="ribbon ribbon-top-right"></div>
+      <img src="imgs/guli_main.jpg" alt="Guli"
+           onerror="this.onerror=null;this.src='';this.parentElement.innerHTML+='<div class=\'photo-placeholder\'><span>🌸</span><p>Guli\'s Photo</p></div>';this.remove();"/>
+      <div class="ribbon ribbon-bottom-left"></div>
+      <div class="ribbon ribbon-bottom-right"></div>
+    </div>
+
+    <button class="continue-btn" onclick="goToWish()">
+      <span>💝 Continue 💝</span>
+    </button>
+  </div>
+
+  <!-- Right: Pandas -->
+  <div class="side-col right-col">
+    <div class="deco-card float-3">
+      <img src="imgs/panda1.png" alt="Panda" onerror="this.src='https://em-content.zobj.net/source/apple/354/panda_1f43c.png'"/>
+      <p>🐼</p>
+    </div>
+    <div class="deco-card float-2">
+      <img src="imgs/panda2.png" alt="Panda 2" onerror="this.src='https://em-content.zobj.net/source/apple/354/panda_1f43c.png'"/>
+      <p>🐼</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════ WISH PAGE ══════════════ -->
+<div id="pageWish" class="page">
+  <div class="hearts-bg" id="heartsBg3"></div>
+  <div class="wish-wrapper">
+    <div class="envelope-icon">💌</div>
+    <div class="wish-card">
+      <div class="wish-stars">⭐ 🌟 ✨ 🌟 ⭐</div>
+      <h2 class="wish-heading">A Special Wish For You 💖</h2>
+
+      <!-- ★ Stylish Photo ★ -->
+      <div class="wish-page-photo-wrap">
+        <div class="wpp-glow"></div>
+        <div class="wpp-frame">
+          <img src="imgs/wish_photo.jpg" alt="Guli" class="wpp-img"/>
+          <div class="wpp-shine"></div>
+        </div>
+        <div class="wpp-petals">
+          <span>🌸</span><span>✨</span><span>💖</span><span>🌸</span><span>💕</span><span>✨</span>
+        </div>
+      </div>
+
+      <div class="wish-lines">
+        <p class="wish-line" style="--wi:0">🌸 Hey <strong>Guli</strong>! On this beautiful day,</p>
+        <p class="wish-line" style="--wi:1">the whole world feels extra special</p>
+        <p class="wish-line" style="--wi:2">because <em>you</em> were born into it. 🌍</p>
+        <p class="wish-line" style="--wi:3">🎂 May your day be filled with laughter,</p>
+        <p class="wish-line" style="--wi:4">love, joy, and everything you deserve! 💝</p>
+        <p class="wish-line" style="--wi:5">🌟 You are truly one in a million —</p>
+        <p class="wish-line" style="--wi:6">kind, beautiful, and absolutely amazing! 🌺</p>
+        <p class="wish-line" style="--wi:7">Here's to YOU and your incredible journey ahead! 🚀</p>
+      </div>
+      <div class="wish-sign">
+        <span>With loads of love &amp; hugs 🤗</span><br/>
+        <span class="wish-sign-name">— Your Special Someone 💕</span>
+      </div>
+      <div class="wish-stars">🎀 🎁 🎉 🎁 🎀</div>
+    </div>
+    <div class="wish-nav-btns">
+      <button class="secret-door-btn" onclick="goToSecret()">🔒 Secret Surprise For Guli 🔒</button>
+      <button class="continue-btn wish-continue-btn" onclick="goToPage2()"><span>🎉 See Gallery 🎉</span></button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════ SECRET LOCK PAGE ══════════════ -->
+<div id="pageSecretLock" class="page">
+  <div class="hearts-bg" id="heartsBgSL"></div>
+  <div class="secret-lock-wrapper">
+    <div class="sl-emoji-top">🌸💌🌸</div>
+    <div class="sl-box">
+      <div class="sl-lock-anim">🔒</div>
+      <h2 class="sl-title">Only For The Birthday Girl</h2>
+      <p class="sl-sub">🎂 Hey Guli! This secret page is just for you.<br/>Enter your special code to unlock 💖</p>
+      <div class="pw-wrap sl-pw-wrap">
+        <input type="password" id="secretPassInput" placeholder="🤫 Enter secret code…"
+               maxlength="20" onkeydown="if(event.key==='Enter') doSecretUnlock()"/>
+        <span class="eye-toggle" onclick="toggleEye('secretPassInput',this)">👁️</span>
+      </div>
+      <div id="secretLockError" class="error-msg"></div>
+      <button class="unlock-btn sl-unlock-btn" onclick="doSecretUnlock()">🔓 Unlock My Surprise 🔓</button>
+    </div>
+    <button class="back-btn" style="margin-top:16px" onclick="transitionTo('pageSecretLock','pageWish')">← Back</button>
+  </div>
+</div>
+
+
+<!-- ══════════════ SECRET CONTENT PAGE ══════════════ -->
+<div id="pageSecretContent" class="page">
+  <audio id="secretMusic" loop>
+    <source src="music/secret_song.mp3" type="audio/mpeg"/>
+  </audio>
+  <div class="hearts-bg" id="heartsBgSC"></div>
+  <canvas id="secretConfetti"></canvas>
+
+  <div class="secret-content-scroll">
+    <div class="sc-header">
+      <div class="sc-header-emoji">💖✨💖</div>
+      <h1 class="sc-title">My Dearest Guli…</h1>
+      <p class="sc-love-line">You are my love, my heart, my everything 🌹</p>
+      <div class="sc-music-bar" id="scMusicBar">
+        <span class="music-note-spin">🎵</span>
+        <span>Playing our special song…</span>
+        <span class="music-note-spin">🎶</span>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="sc-section">
+      <div class="sc-section-title">🎬 A Special Video For You 🎬</div>
+      <div class="sc-video-wrap">
+        <video id="secretVideo" controls playsinline>
+          <source src="video/secret_video.mp4" type="video/mp4"/>
+        </video>
+      </div>
+    </div>
+
+    <!-- Tap Slideshow -->
+    <div class="sc-section">
+      <div class="sc-section-title">💕 Our Special Moments — Tap to Reveal 💕</div>
+      <div class="love-slideshow" id="loveSlideshow" onclick="nextSlide(event)">
+        <div class="love-slide active" data-index="0">
+          <img src="imgs/special1.jpg" alt="Us 1"/>
+          <div class="slide-overlay"><div class="slide-caption">💚 Us in the park… my favourite day 🌿</div></div>
+        </div>
+        <div class="love-slide" data-index="1">
+          <img src="imgs/special2.jpg" alt="Us 2"/>
+          <div class="slide-overlay"><div class="slide-caption">🖤 Matching black… we were meant to be 🫶</div></div>
+        </div>
+        <div class="love-slide" data-index="2">
+          <img src="imgs/special3.jpg" alt="Us 3"/>
+          <div class="slide-overlay"><div class="slide-caption">💜 Every moment with you is magic ✨</div></div>
+        </div>
+        <div class="love-slide" data-index="3">
+          <img src="imgs/special4.jpg" alt="Us 4"/>
+          <div class="slide-overlay"><div class="slide-caption">🌧️ Even the rain feels beautiful with you ☂️</div></div>
+        </div>
+        <div class="tap-hint" id="tapHint">👆 Tap to see more</div>
+        <div class="slide-dots">
+          <span class="dot active" onclick="goToSlide(event,0)"></span>
+          <span class="dot"        onclick="goToSlide(event,1)"></span>
+          <span class="dot"        onclick="goToSlide(event,2)"></span>
+          <span class="dot"        onclick="goToSlide(event,3)"></span>
+        </div>
+        <div class="heart-burst" id="heartBurst"></div>
+      </div>
+      <div class="love-quote">
+        <span class="lq-heart">💖</span>
+        <span class="lq-text" id="lqText">"You are my favourite person in this whole world."</span>
+        <span class="lq-heart">💖</span>
+      </div>
+    </div>
+
+    <!-- Wish Box -->
+    <div class="sc-section">
+      <div class="sc-wish-box" style="position:relative;overflow:visible">
+        <div class="sc-wish-title">💌 Write Your Love Back To Me!</div>
+        <p class="sc-wish-sub">My heart is waiting for your words, Guli 🥰 Say anything… 💕</p>
+        <textarea id="scWishText" class="guli-wish-textarea sc-textarea"
+          placeholder="Hey! I wish… 💕 (write anything and hit Send!)"
+          onkeydown="if(event.key==='Enter' && !event.shiftKey){event.preventDefault();sendLoveBomb();}"></textarea>
+        <div class="wish-actions">
+          <button class="save-wish-btn love-bomb-btn" onclick="sendLoveBomb()">💌 Send Love 💕</button>
+        </div>
+        <!-- Love bomb blast container -->
+        <div id="loveBombContainer" class="love-bomb-container"></div>
+      </div>
+    </div>
+
+    <div class="sc-nav">
+      <button class="back-btn" onclick="goBackFromSecret()">← Back</button>
+      <button class="continue-btn sc-gallery-btn" onclick="goToPage2()"><span>🎉 See My Gallery 🎉</span></button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════ PAGE 2 — GALLERY + CAKE ══════════════ -->
+<div id="page2" class="page">
+  <audio id="bgMusic" loop>
+    <source src="music/birthday_song.mp3" type="audio/mpeg"/>
+  </audio>
+  <canvas id="confettiCanvas"></canvas>
+  <div class="hearts-bg" id="heartsBg2"></div>
+
+  <!-- Birthday note -->
+  <div class="p2-top">
+    <div class="note-inner">
+      <div class="note-emoji">🎂🎉🎈</div>
+      <h1 class="guli-title">Happy Birthday<br/><span class="guli-name">Guli</span> 💖</h1>
+      <p class="note-msg">Wishing you a day as bright, beautiful,<br/>and magical as you are. 🌸</p>
+      <div class="note-emoji">🎀✨🎁</div>
+    </div>
+
+    <div class="music-bar" id="musicBar">
+      <span class="music-note-spin">🎵</span>
+      <span>Today is Lulu's Birthday</span>
+      <span class="music-note-spin">🎶</span>
+    </div>
+  </div>
+
+  <!-- ★ CAKE + ORBITING PHOTOS ★ -->
+  <div class="cake-universe" id="cakeUniverse">
+
+    <!-- 6 orbiting photo cards (positioned by JS) -->
+    <div class="orbit-item" id="op0"><img src="imgs/guli1.jpg" onerror="this.style.opacity='0'"/><div class="op-frame"></div></div>
+    <div class="orbit-item" id="op1"><img src="imgs/guli2.jpg" onerror="this.style.opacity='0'"/><div class="op-frame"></div></div>
+    <div class="orbit-item" id="op2"><img src="imgs/guli3.jpg" onerror="this.style.opacity='0'"/><div class="op-frame"></div></div>
+    <div class="orbit-item" id="op3"><img src="imgs/guli4.jpg" onerror="this.style.opacity='0'"/><div class="op-frame"></div></div>
+    <div class="orbit-item" id="op4"><img src="imgs/guli5.jpg" onerror="this.style.opacity='0'"/><div class="op-frame"></div></div>
+    <div class="orbit-item" id="op5"><img src="imgs/guli6.jpg" onerror="this.style.opacity='0'"/><div class="op-frame"></div></div>
+
+    <!-- 3D CAKE (center) -->
+    <div class="cake-center" id="cakeCenter">
+
+      <!-- Candles -->
+      <div class="cake-candles">
+        <div class="candle"><div class="flame" style="animation-delay:0s"></div><div class="candle-body"></div></div>
+        <div class="candle"><div class="flame" style="animation-delay:0.2s"></div><div class="candle-body"></div></div>
+        <div class="candle"><div class="flame" style="animation-delay:0.4s"></div><div class="candle-body"></div></div>
+      </div>
+
+      <!-- Cake tiers -->
+      <div class="cake-3d" id="cake3d">
+        <!-- Top tier -->
+        <div class="cake-tier c-top">
+          <div class="t-face"></div>
+          <div class="t-body">
+            <span class="t-deco">🌸</span>
+          </div>
+        </div>
+        <!-- Mid tier -->
+        <div class="cake-tier c-mid">
+          <div class="t-face"></div>
+          <div class="t-body">
+            <span class="t-deco">💜</span>
+            <span class="t-deco">💜</span>
+          </div>
+        </div>
+        <!-- Bottom tier -->
+        <div class="cake-tier c-bot">
+          <div class="t-face"></div>
+          <div class="t-body">
+            <span class="t-deco">❤️</span>
+            <span class="t-deco">❤️</span>
+            <span class="t-deco">❤️</span>
+          </div>
+        </div>
+        <!-- Plate -->
+        <div class="cake-plate"></div>
+      </div>
+
+      <!-- ★ 3D Animated Knife ★ -->
+      <div class="knife-wrap" id="knifeWrap">
+        <div class="k-handle">
+          <div class="k-rivet"></div>
+          <div class="k-rivet"></div>
+        </div>
+        <div class="k-bolster"></div>
+        <div class="k-blade">
+          <div class="k-shine"></div>
+          <div class="k-edge"></div>
+        </div>
+      </div>
+
+      <!-- Cream splatter container -->
+      <div class="cream-burst" id="creamBurst"></div>
+    </div><!-- /cake-center -->
+  </div>
+
+  <!-- Cut button -->
+  <div class="cut-row">
+    <button class="cut-cake-btn" id="cutBtn" onclick="cutTheCake()">🔪 Cut the Cake! 🎂</button>
+  </div>
+
+  <!-- Celebration message after cut -->
+  <div class="cut-celebration" id="cutCelebration" style="display:none">
+    🎊 Happy Birthday Guli! 🎊<br/>
+    <span>May all your wishes come true! 🌟💖</span>
+  </div>
+
+  <button class="back-btn p2-back" onclick="goToWish()">← Back</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
